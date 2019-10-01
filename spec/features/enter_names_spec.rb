@@ -3,7 +3,7 @@ feature 'Names' do
     visit('/')
     fill_in :name1, with: 'Dave'
     fill_in :name2, with: 'Mittens'
-    click_button "Enter both players' names"
+    click_button "Ready!"
     expect(page).to have_content 'Dave vs. Mittens'
   end
 end
