@@ -12,10 +12,10 @@ end
       expect(page).to have_content '60/60 HP'
     end
 
-  # scenario "reduce apponents hit points" do
-  #   sign_in_and_play
-  #   click_button 'Attack!'
-  #   expect(page).to have_content '50/60 HP'
-  #   expect(page).to have_content "Attacked Mittens's monster for 10 damage!"
-  # end
+  scenario "reduce apponents hit points" do
+    sign_in_and_play
+    click_button 'Attack!'
+    expect(page).to have_content '50/60 HP'
+    expect(page).to have_content "Attacked Mittens's monster for 10 damage!"
+  end
 end
