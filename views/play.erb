@@ -1,12 +1,12 @@
-<%= $player1.name %> vs. <%=$player2.name%>
-<%= $player2.hp %>/60 HP
+<%= $game.player1.name %> vs. <%=$game.player2.name%>
+<%= $game.player2.hp %>/60 HP
 <label for="Attack opponent">
   <form action="/attack" method="get">
   <input type="submit" id="Attack opponent" value="Attack!">
   </form>
 </label>
 <% if @lastaction == :p1attack %>
-<div> Attacked <%= $player2.name %>'s monster for 10 damage!</div>
+<div> Attacked <%= $game.player2.name %>'s monster for 10 damage!</div>
 <% end %>
 
 
