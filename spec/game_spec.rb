@@ -14,7 +14,15 @@ describe Game do
   describe '#attack_player' do
     it 'forwards the attack to the player object' do
       expect(player2).to receive(:reduce_hp)
-      subject.attack_player2
+      subject.attack
+    end
+
+    it 'allows players to alternate turns' do
+      expect(player1).to receive(:reduce_hp)
+      allow(player2).to receive(:reduce_hp)
+      subject.attack
+      subject.attack
     end
   end
+
 end

@@ -6,9 +6,20 @@ class Game
   def initialize(player1, player2)
     @player1 = player1
     @player2 = player2
+    @opponent = @player2
   end
   
-  def attack_player2
-    @player2.reduce_hp
+  def attack
+    @opponent.reduce_hp
+    switch
+  end
+
+  private
+  def switch
+    if @opponent == @player2
+      @opponent = @player1
+    else 
+      @opponent = @player2
+    end
   end
 end
