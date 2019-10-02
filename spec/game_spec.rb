@@ -11,6 +11,10 @@ describe Game do
     subject.player1.name
   end
 
+  it 'knows the current player' do
+    expect(subject.current_player).to eq player1
+  end
+
   describe '#attack_player' do
     it 'forwards the attack to the player object' do
       expect(player2).to receive(:reduce_hp)

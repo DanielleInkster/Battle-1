@@ -8,7 +8,13 @@ feature 'Names' do
 feature 'Points' do
   scenario "see opponents hit points" do
     sign_in_and_play
-    expect(page).to have_content 'Dave vs. Mittens'
+    expect(page).to have_content("Mittens's HP:")
+    expect(page).to have_content '60/60 HP'
+  end
+  
+  scenario 'see players hit points' do
+    sign_in_and_play
+    expect(page).to have_content("Dave's HP:")
     expect(page).to have_content '60/60 HP'
   end
 
@@ -26,6 +32,7 @@ feature 'Switch' do
     click_button 'Attack!'
     click_button 'Attack!'
     expect(page).to have_content '50/60 HP'
+    expect(page).to have_content "Attacked Dave's monster for 10 damage!"
   end
 end
 
