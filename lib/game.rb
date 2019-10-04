@@ -17,9 +17,9 @@ class Game
 
   def message
     if lose? == true
-      "#{@current_player} loses!"
+      "#{@current_player.name} loses!"
     else
-      "Attacked #{@current_player}'s monster for 10 damage!"
+      "Attacked #{@current_player.name}'s monster for 10 damage!"
     end
     end
 
