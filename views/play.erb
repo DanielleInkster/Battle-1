@@ -1,15 +1,15 @@
-<%= $game.player1.name %> vs. <%=$game.player2.name%>
+<%= @game.player1.name %> vs. <%=@game.player2.name%>
 <div>
   <p>
-    <%= $game.player2.name %>'s HP:
+    <%= @game.player2.name %>'s HP:
   </p>
-  <%= $game.player2.hp %>/60 HP
+  <%= @game.player2.hp %>/60 HP
 </div>
 <div>
   <p>
-    <%= $game.player1.name %>'s HP:
+    <%= @game.player1.name %>'s HP:
   </p>
-  <%= $game.player1.hp %>/60 HP
+  <%= @game.player1.hp %>/60 HP
 </div>
 <label for="Attack opponent">
   <form action="/attack" method="get">
@@ -17,7 +17,7 @@
   </form>
 </label>
 <% if @lastaction == :attack %>
-<div> <%= $game.message%></div>
+<div> <%= @game.message%></div>
 <% end %>
 
 

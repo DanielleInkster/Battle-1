@@ -9,6 +9,14 @@ class Game
     @opponent = @player2
     @current_player = @player1
   end
+
+  def self.create(player1, player2)
+    @game = Game.new(player1, player2)
+  end
+
+  def self.instance
+    @game
+  end
   
   def attack
     @opponent.reduce_hp
