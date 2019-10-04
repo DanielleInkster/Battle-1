@@ -7,15 +7,15 @@ describe Player do
   end
 
   describe '#reduce_hp' do
-    it 'lowers the hp attribute by 10' do
+    it 'lowers the hp attribute by random amount' do
       subject.reduce_hp
-      expect(subject.hp).to eq 50
+      expect(subject.hp).to be < 60
     end
   end
 
   describe '#check?' do
     it 'checks if the player is out of hp' do
-      6.times do
+      60.times do
         subject.reduce_hp
       end
       expect(subject.check?).to eq true
@@ -24,7 +24,7 @@ describe Player do
 
   describe '#lose' do
     it 'puts a message if the player loses' do
-      6.times do
+      60.times do
         subject.reduce_hp
       end
       expect(subject.check?).to eq true

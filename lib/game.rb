@@ -27,7 +27,7 @@ class Game
     if lose? == true
       "#{@current_player.name} loses!"
     else
-      "Attacked #{@current_player.name}'s monster for 10 damage!"
+      "Attacked #{@current_player.name}'s monster for #{@current_player.random} damage!"
     end
     end
 

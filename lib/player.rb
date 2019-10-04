@@ -1,5 +1,5 @@
 class Player
-  attr_reader :name, :hp
+  attr_reader :name, :hp, :random
 
   def initialize(name:)
     @name = name
@@ -7,10 +7,14 @@ class Player
   end
 
   def reduce_hp
-    @hp -= 10
+    @hp -= random
+  end
+
+  def random
+    [1,2,5,10].sample
   end
 
   def check?
-    @hp == 0
+    @hp <= 0
   end
 end

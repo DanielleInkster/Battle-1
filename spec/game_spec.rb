@@ -4,7 +4,6 @@ describe Game do
   let (:player1) { double :player1 }
   let (:player2) { double :player2 }
 
-
   subject(:game) { described_class.new(player1, player2) }
 
   it 'allows access to players' do
@@ -32,7 +31,7 @@ describe Game do
 
   # describe '#message' do
   #   it 'Outputs a message when a player loses' do
-  #     allow(player).to receive(:lose)
+  #     allow(player).to receive(:reduce_hp)
   #     expect(game.message).to eq ' loses!'
   #   end
   # end
