@@ -22,7 +22,7 @@ class Battle < Sinatra::Base
   end
 
   get '/attack' do
-    session[:lastaction] = :p1attack
+    session[:lastaction] = :attack
     $game.attack
     redirect '/play'
   end

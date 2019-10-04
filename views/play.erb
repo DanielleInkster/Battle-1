@@ -16,8 +16,8 @@
   <input type="submit" id="Attack opponent" value="Attack!">
   </form>
 </label>
-<% if @lastaction == :p1attack %>
-<div> Attacked <%= $game.current_player.name %>'s monster for 10 damage!</div>
+<% if @lastaction == :attack %>
+<div> <%= $game.message%></div>
 <% end %>
 
 

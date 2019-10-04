@@ -15,6 +15,15 @@ class Game
     switch
   end
 
+  def message
+    if lose? == true
+      "#{@current_player} loses!"
+    else
+      "Attacked #{@current_player}'s monster for 10 damage!"
+    end
+    end
+
+
   private
   def switch
     if @opponent == @player2
@@ -24,5 +33,9 @@ class Game
       @opponent = @player2
       @current_player = @player1
     end
+  end
+
+  def lose?
+    @current_player.check? == true
   end
 end

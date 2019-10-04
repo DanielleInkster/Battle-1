@@ -18,7 +18,7 @@ feature 'Points' do
     expect(page).to have_content '60/60 HP'
   end
 
-  scenario "reduce apponents hit points" do
+  scenario "reduce opponents hit points" do
     sign_in_and_play
     click_button 'Attack!'
     expect(page).to have_content '50/60 HP'
@@ -36,4 +36,11 @@ feature 'Switch' do
   end
 end
 
-
+  feature 'Lose' do  
+    scenario "allows a player to lose" do
+    sign_in_and_play
+    play_to_lose
+    expect(page).to have_content '0/60 HP'
+    expect(page).to have_content "Mittens loses!"
+    end
+end

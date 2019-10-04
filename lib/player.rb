@@ -9,4 +9,8 @@ class Player
   def reduce_hp
     @hp -= 10
   end
+
+  def check?
+    @hp == 0
+  end
 end
