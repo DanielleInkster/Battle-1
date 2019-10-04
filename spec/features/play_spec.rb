@@ -27,7 +27,7 @@ feature 'Points' do
 end
 
 feature 'Switch' do
-  scenario "alllows players to alternate turns" do
+  scenario "allows players to alternate turns" do
     sign_in_and_play
     click_button 'Attack!'
     click_button 'Attack!'
